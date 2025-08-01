@@ -10,13 +10,15 @@ div {
 
 .menu-bar {
     float:left;
-    position: absolute;
-    height: 100vh;
+    position: fixed;
+    top: 0;
+    bottom: 0;
     width: 170px;
     background-color: #494CB4;
     color: white;
     padding: 25px;
     font-size: 20px;
+    z-index: 5;
     transform: translateX(-120px);
     transition: all 0.5s;
 }
@@ -54,6 +56,9 @@ nav {
     display: flex;
     background-color: white;
     z-index: 1;
+    position: fixed;
+    top:0;
+    left:0;
 }
 
 .search-box {
@@ -78,7 +83,7 @@ input {
     transition: all 0.5s;
 }
 
-button {
+.search-button {
     height: 35px;
     width: 35px;
     box-sizing: border-box;
@@ -106,18 +111,35 @@ input:focus {
     justify-content: flex-end;
 }
 
+.nav-menu-box {
+    display: none;
+    width: 100%;
+    height: 100%;
+    text-align: right;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.nav-menu {
+    border: 1px solid #EBEBEB;
+    font-size: 20px;
+    background-color: white;
+    color: #7F7F7F;
+    border-radius: 5px;
+}
+
 .font-small {
     font-size: 9px;
 }
 
 
 .dashboard {
-    background-color: #FAFAFA
-    ;
+    background-color: #FAFAFA;
     width: 100%;
     padding-left: 70px;
     padding-right: 20px;
     padding-top: 20px;
+    margin-top: 50px;
     height: calc(100vh - 50px);
 }
 
@@ -194,10 +216,18 @@ h5, h2, h4 {
 
 @media screen and (max-width: 992px) {
     .search-box {
-        /*display : none;*/
+        display : none;
     }
 
     .profile-box {
-        /*display : none;*/
+        display : none;
+    }
+
+    .nav-menu-box {
+        display: flex;
+    }
+
+    .dashboard {
+        height: auto;
     }
 }
