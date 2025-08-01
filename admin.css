@@ -121,10 +121,6 @@ input:focus {
     height: calc(100vh - 50px);
 }
 
-h2 {
-    font-weight: bold;
-}
-
 .row {
     margin: 0;
     width: 100%;
@@ -180,8 +176,9 @@ h2 {
     font-size: 14px;
 }
 
-.txt h4 {
+h5, h2, h4 {
     font-weight: bold;
+    margin-bottom: 0;
 }
 
 .icn {
